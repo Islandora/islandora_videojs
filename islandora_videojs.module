@@ -1,0 +1,48 @@
+<?php
+/**
+ * @file
+ *
+ */
+
+/**
+ * Implements hook_islandora_viewer_info().
+ */
+function islandora_videojs_islandora_viewer_info() {
+  return array(
+    'islandora_videojs' => array(
+      'label' => t('video.js player'),
+      'description' => t('video.js for video.'),
+      'callback' => 'islandora_videojs_callback',
+      'mimetype' => array('audio/mpeg', 'video/mp4'),
+    ),
+  );
+}
+
+/**
+ * Callback function to process audio player
+ *
+ * @param array $params
+ *   Array with configuration info for the audio player
+ */
+function islandora_videojs_callback($params = array()) {
+
+  // This should be a theme function.
+  $output = "<div id=\"mediaplayer\">Loading video.js...</div>";
+  $videojs_path = libraries_get_path("videojs");
+  drupal_add_js($videojs_path . "/video.js");
+  $mime_detect = new MimeDetect();
+  $extension = $mime_detect->getExtension($params["mime"]);
+
+  //drupal_add_js(array(
+  //  "islandora_videojs" => array(
+  //    "url" => $params["url"] . '/file_name_spoof.' . $extension,
+  //    "mimetype" => $params["mime"],
+  //    "thumbnail" => $params["tn"],
+  //  )),
+  //'setting');
+
+  $mypath = drupal_get_path("module", "islandora_videojs");
+  drupal_add_js($mypath . "/js/player.js", array('preprocess' => FALSE));
+
+  return $output;
+}
