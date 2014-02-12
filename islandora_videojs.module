@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * An Islandora viewer module using Video.js
+ */
+
+/**
  * Implements hook_islandora_viewer_info().
  */
 function islandora_videojs_islandora_viewer_info() {
@@ -26,6 +31,9 @@ function islandora_videojs_theme($existing, $type, $theme, $path) {
   );
 }
 
+/**
+ * Implements hook_preprocess().
+ */
 function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
   $params = $variables['params'];
   $variables['tn'] = url($params['tn']);
@@ -40,7 +48,7 @@ function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
  * Callback function to process audio player
  *
  * @param array $params
- *   Array with configuration info for the audio player
+ *   Array with configuration info for the audio player.
  */
 function islandora_videojs_callback($params = array()) {
   return theme('islandora_videojs', array('params' => $params));
