@@ -45,7 +45,7 @@ function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
 }
 
 /**
- * Callback function to process audio player
+ * Callback function to process audio player.
  *
  * @param array $params
  *   Array with configuration info for the audio player.
