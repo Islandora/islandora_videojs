@@ -1,4 +1,4 @@
-# Islandora Video.js [![Build Status](https://travis-ci.org/ruebot/islandora_videojs.png?branch=7.x)](https://travis-ci.org/ruebot/islandora_videojs)
+# Islandora Video.js [![Build Status](https://travis-ci.org/Islandora/islandora_videojs.png?branch=7.x)](https://travis-ci.org/islandora/islandora_videojs)
 
 ## Introduction
 
