@@ -26,6 +26,10 @@ Select the Video.js viewer at Administration » Islandora » Solution pack confi
 
 ## Troubleshooting/Issues
 
+The Video.js directory must be installed as the directory name "video.js" in the Drupal library directory.  If you see HTTP 404 errors for "//video.js" that means Drupal has not found the "video.js" folder.
+
+HTTP 404 errors for "video.js.map" is a [known issue](http://stackoverflow.com/questions/18407543/video-js-map-throwing-a-404-not-found) (the JavaScript Source Map is not included in the distribution).  You can stop the video.js client from requesting the video.js.map by removing "//@ sourceMappingURL=video.js.map" from the bottom of the video.js file.
+
 Having problems or solved a problem? Check out the Islandora google groups for a solution.
 
 * [Islandora Group](https://groups.google.com/forum/?hl=en&fromgroups#!forum/islandora)
