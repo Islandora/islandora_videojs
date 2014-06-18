@@ -36,7 +36,7 @@ function islandora_videojs_theme($existing, $type, $theme, $path) {
  */
 function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
   $params = $variables['params'];
-  $variables['tn'] = url($params['tn']);
+  $variables['tn'] = $params['tn'];
   $videojs_path = libraries_get_path("video.js");
   drupal_add_js($videojs_path . "/video.js");
   drupal_add_css($videojs_path . '/video-js.css');
