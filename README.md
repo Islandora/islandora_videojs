@@ -22,7 +22,7 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 Select the Video.js viewer at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
 
-[![Configuration](http://i.imgur.com/NhMJY2u.png)](http://i.imgur.com/NhMJY2u.png)
+[![Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
 
 ## Troubleshooting/Issues
 
