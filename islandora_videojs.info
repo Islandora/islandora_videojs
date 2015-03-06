@@ -3,5 +3,5 @@ description = "A plugin allowing video.js to play Islandora content"
 dependencies[] = libraries
 dependencies[] = libraries
 core = 7.x
-version = 7.x-dev
+version = 7.x-1.5RC1
 package = Islandora Viewers
