@@ -12,7 +12,7 @@ define('VIDEOJS_DOWNLOAD_URI', 'http://www.videojs.com/downloads/video-js-4.0.0.
 /**
  * The initial Video.js directory
  */
-define('VIDEOJS_ORIGINAL_DIR', 'videojs');
+define('VIDEOJS_ORIGINAL_DIR', 'video-js');
 
 /**
  * Implements hook_drush_command().
