@@ -9,6 +9,10 @@
  * The Video.js plugin URI.
  */
 define('VIDEOJS_DOWNLOAD_URI', 'http://www.videojs.com/downloads/video-js-4.0.0.zip');
+/**
+ * The initial Video.js directory
+ */
+define('VIDEOJS_ORIGINAL_DIR', 'video-js');
 
 /**
  * Implements hook_drush_command().
@@ -48,7 +52,7 @@ function drush_islandora_videojs_plugin() {
     $path = $args[0];
   }
   else {
-    $path = 'sites/all/libraries';
+    $path = _drush_core_directory("@site:sites/all/libraries");
   }
 
   // Create the path if it does not exist.
@@ -64,7 +68,7 @@ function drush_islandora_videojs_plugin() {
   // Download the zip archive.
   if ($filepath = drush_download_file(VIDEOJS_DOWNLOAD_URI)) {
     $filename = basename($filepath);
-    $dirname = 'video-js';
+    $dirname = VIDEOJS_ORIGINAL_DIR;
 
     // Remove any existing Video.js plugin directory.
     if (is_dir($dirname) || is_dir('video-js')) {
