@@ -48,7 +48,7 @@ function drush_islandora_videojs_plugin() {
     $path = $args[0];
   }
   else {
-    $path = 'sites/all/libraries';
+    $path = _drush_core_directory("@site:sites/all/libraries");
   }
 
   // Create the path if it does not exist.
