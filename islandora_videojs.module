@@ -41,7 +41,12 @@ function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
   drupal_add_js($videojs_path . "/video.js");
   drupal_add_css($videojs_path . '/video-js.css');
 
-  $variables['sources'][] = array('url' => $params['url'], 'mime' => $params['mime']);
+  if (isset($params['sources']) && is_array($params['sources'])) {
+    $variables['sources'] = $params['sources'];
+  }
+  else {
+    $variables['sources'][] = array('url' => $params['url'], 'mime' => $params['mime']);
+  }
 }
 
 /**
