@@ -8,7 +8,7 @@
 /**
  * The Video.js plugin URI.
  */
-define('VIDEOJS_DOWNLOAD_URI', 'http://www.videojs.com/downloads/video-js-4.12.11.zip');
+define('VIDEOJS_DOWNLOAD_URI', 'https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip');
 /**
  * The initial Video.js directory
  */
