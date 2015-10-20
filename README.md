@@ -8,15 +8,15 @@ An Islandora viewer module using [Video.js](http://www.videojs.com/).
 
 * [Islandora](https://github.com/islandora/islandora)
 * [Tuque](https://github.com/islandora/tuque)
-* [Video.js](http://www.videojs.com/downloads/video-js-4.0.0.zip)
+* [Video.js](https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip)
 
 ## Installation
 
 Install as usual, see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
 
-[Download](http://www.videojs.com/downloads/video-js-4.0.0.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
+[Download](https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
 
-**Note** This viewer has been tested with video.js 4.0.0.
+**Note** This viewer has been tested with video.js 4.12.15.
 
 **Note** If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
 
