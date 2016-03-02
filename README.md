@@ -16,17 +16,17 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 [Download](https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
 
-**Note** This viewer has been tested with video.js 4.12.15.
-
-**Note** Some features of video.js (such as rtmp streaming) only work with newer versions of video.js. If you encounter errors with streaming sources, try updating the video.js library. 
-
-**Note** If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
-
 ## Configuration
 
 Select the Video.js viewer at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
 
 [![Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
+
+## Notes
+
+* This viewer has been tested with video.js 4.12.15.
+* Some features of video.js (such as rtmp streaming) only work with newer versions of video.js. If you encounter errors with streaming sources, try updating the video.js library. 
+* If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
 
 ## Documentation
 
@@ -49,7 +49,6 @@ Having problems or solved a problem? Check out the Islandora google groups for a
 Current maintainers:
 
 * [Nick Ruest](https://github.com/ruebot)
-* [Nelson Hart](https://github.com/nhart)
 
 ## Development
 
