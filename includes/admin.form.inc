@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Admin callbacks for Islandora OpenSeadragon
+ * Admin callbacks for Islandora Videojs
  */
 /**
- * Admin form. Descriptions taken from the deepzoom module.
+ * Admin form.
  */
 function islandora_videojs_admin($form, &$form_state) {
   // Get settings.
@@ -21,7 +21,7 @@ function islandora_videojs_admin($form, &$form_state) {
 }
 
 /**
- * Handles a submit from the admin pane.
+ * Validates the above element.
  */
 function videojs_hls_validate($element, $form, &$form_state) {
   if ($element['#checked'] === TRUE) {
