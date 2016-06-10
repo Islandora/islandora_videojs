@@ -78,7 +78,7 @@ function drush_islandora_videojs_plugin() {
     }
 
     // Decompress the zip archive.
-    drush_tarball_extract($filename);
+    drush_tarball_extract($filename, 'video-js');
 
     // Change the directory name to "video-js" if needed.
     if ($dirname != 'video-js') {
