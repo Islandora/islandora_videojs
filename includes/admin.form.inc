@@ -10,7 +10,7 @@
 function islandora_videojs_admin($form, &$form_state) {
   // Get settings.
   $form = array();
-  $form['hls_library'] = array(
+  $form['islandora_videojs_hls_library'] = array(
     '#type' => 'checkbox',
     '#title' => t('Videojs-contrib-hls library'),
     '#description' => t('Include the videojs-contrib-hls library js, videojs.contrib-hls.js?'),
