@@ -14,7 +14,7 @@ An Islandora viewer module using [Video.js](http://www.videojs.com/).
 
 Install as usual, see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
 
-[Download](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
+[Download](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip) and install [video.js](http://www.videojs.com/) to your sites/all/libraries folder, or run `drush videojs-plugin`. 
 
 ## Configuration
 
