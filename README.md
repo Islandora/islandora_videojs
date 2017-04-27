@@ -8,13 +8,13 @@ An Islandora viewer module using [Video.js](http://www.videojs.com/).
 
 * [Islandora](https://github.com/islandora/islandora)
 * [Tuque](https://github.com/islandora/tuque)
-* [Video.js](https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip)
+* [Video.js](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip)
 
 ## Installation
 
 Install as usual, see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
 
-[Download](https://github.com/videojs/video.js/releases/download/v4.12.15/video-js-4.12.15.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
+[Download](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip) and install [video.js](http://www.videojs.com/) to your sites/libraries folder, or run `drush videojs-plugin`. 
 
 ## Configuration
 
@@ -24,7 +24,7 @@ Select the Video.js viewer at Administration » Islandora » Solution pack confi
 
 ## Notes
 
-* This viewer has been tested with video.js 4.12.15.
+* This viewer has been tested with video.js 5.10.2.
 * Some features of video.js (such as rtmp streaming) only work with newer versions of video.js. If you encounter errors with streaming sources, try updating the video.js library. 
 * If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
 
