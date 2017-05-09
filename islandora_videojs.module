@@ -50,9 +50,9 @@ function islandora_videojs_theme($existing, $type, $theme, $path) {
 }
 
 /**
- * Implements hook_preprocess().
+ * Implements template_preprocess_HOOK().
  */
-function islandora_videojs_preprocess_islandora_videojs(array &$variables) {
+function template_preprocess_islandora_videojs(array &$variables) {
   $params = $variables['params'];
   $variables['tn'] = $params['tn'];
   $videojs_path = libraries_get_path("video-js");
