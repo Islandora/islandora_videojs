@@ -1,5 +1,8 @@
 <video id="islandora_videojs" class="video-js vjs-default-skin" controls
- preload="auto" width="640" height="264" poster="<?php print $tn; ?>"
+ preload="auto" width="640" height="264" 
+  <?php if (isset($tn)): ?>
+    poster="<?php print $tn; ?>"
+  <?php endif; ?>
  data-setup="{}">
   <?php foreach ($sources as $source): ?>
     <source src="<?php print $source['url']; ?>" type='<?php print $source['mime']; ?>'>

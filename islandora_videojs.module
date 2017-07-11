@@ -54,7 +54,9 @@ function islandora_videojs_theme($existing, $type, $theme, $path) {
  */
 function template_preprocess_islandora_videojs(array &$variables) {
   $params = $variables['params'];
-  $variables['tn'] = $params['tn'];
+  if (isset($params['tn'])) {
+    $variables['tn'] = $params['tn'];
+  }
   $videojs_path = libraries_get_path("video-js");
   drupal_add_js($videojs_path . "/video.js");
   drupal_add_css($videojs_path . '/video-js.css');
@@ -64,8 +66,11 @@ function template_preprocess_islandora_videojs(array &$variables) {
   if (isset($params['sources']) && is_array($params['sources'])) {
     $variables['sources'] = $params['sources'];
   }
-  else {
+  else if (isset($params['url']) && isset($params['mime'])) {
     $variables['sources'][] = array('url' => $params['url'], 'mime' => $params['mime']);
+  }
+  else {
+    $variables['sources'] = array();
   }
 }
 
