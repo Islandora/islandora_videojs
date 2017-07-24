@@ -8,3 +8,8 @@
     <source src="<?php print $source['url']; ?>" type='<?php print $source['mime']; ?>'>
   <?php endforeach; ?>
 </video>
+<?php if (empty($sources)): ?>
+<div id="video-js-warning">
+No video sources available.
+</div>
+<?php endif; ?>
