@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * @file
+ * Install hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function islandora_videojs_hls_requirements($phase) {
+  $t = get_t();
+  $requirements = array();
+  $hls_lib = libraries_get_path('videojs-contrib-hls');
+  $requirements['videojs_contrib_hls_library'] = array(
+    'title' => $t('videojs-contrib-hls Library'),
+    'value' => $hls_lib ? $hls_lib : $t('Missing'),
+    'severity' => $hls_lib ? REQUIREMENT_OK : REQUIREMENT_WARNING,
+  );
+  if ($hls_lib) {
+    $min_exists = file_exists($hls_lib . '/videojs-contrib-hls.min.js');
+    $requirements['videojs-contrib-hls.min.js'] = array(
+      'title' => $t('videojs-contrib-hls.min.js File'),
+      'severity' => $min_exists ? REQUIREMENT_OK : REQUIREMENT_WARNING,
+    );
+  }
+  return $requirements;
+}

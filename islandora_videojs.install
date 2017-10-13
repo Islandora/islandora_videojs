@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Install hooks.
+ */
+
+/**
+ * Information about the islandora_videojs update.
+ *
+ * Also removes the old variable.
+ */
+function islandora_videojs_update_7000(&$sandbox) {
+  variable_del('islandora_videojs_hls_library');
+  return t('Removed the old HLS library Drupal variable. Support for the videojs-contrib-hls plugin has been moved to the islandora_videojs_hls submodule, which should be enabled for continued support of the plugin. This will require placing videojs-contrib-hls.min.js in a "videojs_contrib_hls" library; check the README for installation details.');
+}
