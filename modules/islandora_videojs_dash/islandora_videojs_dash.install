@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Installation hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function islandora_videojs_dash_requirements() {
+  $t = get_t();
+  $requirements = array();
+  $dash_lib = libraries_get_path('videojs-contrib-dash');
+  $requirements['videojs_contrib_dash_library'] = array(
+    'title' => $t('videojs-contrib-dash Library'),
+    'value' => $dash_lib ? $dash_lib : $t('Missing'),
+    'severity' => $dash_lib ? REQUIREMENT_OK : REQUIREMENT_WARNING,
+  );
+  if ($dash_lib) {
+    $min_exists = file_exists($dash_lib . '/videojs-contrib-hls.min.js');
+    $requirements['videojs-contrib-dash.min.js'] = array(
+      'title' => $t('videojs-contrib-dash.min.js File'),
+      'severity' => $min_exists ? REQUIREMENT_OK : REQUIREMENT_WARNING,
+    );
+    $dash_exists = file_exists($dash_lib . '/dash.all.min.js');
+    $requirements['dash.all.min.js'] = array(
+      'title' => $t('dash.all.min.js File'),
+      'severity' => $dash_exists ? REQUIREMENT_OK : REQUIREMENT_WARNING,
+    );
+  }
+  return $requirements;
+}

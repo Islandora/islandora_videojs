@@ -1,0 +1,6 @@
+name = Islandora Video.js MPEG-Dash Support
+description = Adds MPEG-Dash video support to the video.js viewer
+core = 7.x
+version = 7.x-dev
+dependencies[] = islandora_videojs
+dependencies[] = libraries
