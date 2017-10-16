@@ -7,7 +7,6 @@ Adds MPEG-Dash support to the islandora_videojs module via the videojs-contrib-d
 ## Requirements
 
 * [Islandora Video.js](https://github.com/islandora/islandora_videojs)
-* [Video.js](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip)
 * [Libraries](https://www.drupal.org/project/libraries)
 * [videojs-contrib-dash](https://github.com/videojs/videojs-contrib-dash/releases) will also need to be installed as a library, which also requires `dash.all.min.js`; no specific version is targeted, though this module was built against `dash.js` *2.6.2* and `videojs-contrib-dash` *2.9.2*
 
