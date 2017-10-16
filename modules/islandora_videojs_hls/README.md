@@ -14,7 +14,7 @@ The [videojs-contrib-hls](https://github.com/videojs/videojs-contrib-hls/release
 
 ## Installation
 
-Before enabling the module, the [videojs-contrib-hls.min.js](https://github.com/videojs/videojs-contrib-hls/releases) plugin should be placed in a folder called `videojs_contrib_hls` in your site's libraries folder.
+Before enabling the module, the [videojs-contrib-hls.min.js](https://github.com/videojs/videojs-contrib-hls/releases) plugin should be placed in a folder called `videojs-contrib-hls` in your site's libraries folder.
 
 After that, enable the module as usual; see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
 

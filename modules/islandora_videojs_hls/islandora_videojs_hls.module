@@ -9,6 +9,6 @@
  * Implements hook_template_preprocess_islandora_videojs().
  */
 function islandora_videojs_hls_template_preprocess_islandora_videojs(array &$variables) {
-  $path = libraries_get_path('videojs_contrib_hls');
+  $path = libraries_get_path('videojs-contrib-hls');
   drupal_add_js($path . "/videojs-contrib-hls.min.js");
 }
