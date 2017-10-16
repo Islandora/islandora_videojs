@@ -1,0 +1,6 @@
+name = Islandora Video.js HLS Support
+description = Adds HLS video support to the video.js viewer
+core = 7.x
+version = 7.x-dev
+dependencies[] = islandora_videojs
+dependencies[] = libraries
