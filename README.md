@@ -2,13 +2,13 @@
 
 ## Introduction
 
-An Islandora viewer module using [Video.js](http://www.videojs.com/).
+An Islandora viewer module using [Video.js](http://www.videojs.com/). It can play mpeg (audio) and mp4 (video) datastreams.
 
 ## Requirements
 
 * [Islandora](https://github.com/islandora/islandora)
 * [Tuque](https://github.com/islandora/tuque)
-* [Video.js](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip)
+* [Video.js](http://www.videojs.com/)
 
 ## Installation
 
@@ -18,14 +18,17 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 
 ## Configuration
 
-Select the Video.js viewer at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
+Select the Video.js viewer as the default viewer for a solution pack that uses audio or video datastreams. The
+ Audio Solution Pack and the Video Solution Pack are known to work with Video.js.
+
+ For example, at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
 
 [![Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
+
 
 ## Notes
 
 * This viewer has been tested with video.js 5.10.2.
-* Some features of video.js (such as rtmp streaming) only work with newer versions of video.js. If you encounter errors with streaming sources, try updating the video.js library. 
 * If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
 
 ## Documentation
@@ -34,9 +37,14 @@ Further documentation for this module is available at [our wiki](https://wiki.du
 
 ## Troubleshooting/Issues
 
-The Video.js directory must be installed as the directory name "video-js" in the Drupal library directory.  If you see HTTP 404 errors for "//video.js" that means Drupal has not found the "video-js" folder.
+Video.js must be installed in the Drupal library directory (e.g. sites/all/libraries) in a folder named
+"video-js".  If you see HTTP 404 errors for "//video.js" that means Drupal has not found the "video-js" folder.
 
-HTTP 404 errors for "video.js.map" is a [known issue](http://stackoverflow.com/questions/18407543/video-js-map-throwing-a-404-not-found) (the JavaScript Source Map is not included in the distribution).  You can stop the video.js client from requesting the video.js.map by removing "//@ sourceMappingURL=video.js.map" from the bottom of the video.js file.
+With some versions of the Video.js library, you may encounter HTTP 404 errors for "video.js.map". This  is a
+[known issue](http://stackoverflow.com/questions/18407543/video-js-map-throwing-a-404-not-found) (the JavaScript Source
+Map was not included in the distribution). You can stop the video.js client from requesting the video.js.map by removing
+ "//@ sourceMappingURL=video.js.map" from the bottom of the video.js file, or by updating to Video.js 5.10.2 (the source
+ map is part of that distribution).
 
 Having problems or solved a problem? Check out the Islandora google groups for a solution.
 

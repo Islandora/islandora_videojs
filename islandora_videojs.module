@@ -12,7 +12,7 @@ function islandora_videojs_islandora_viewer_info() {
   return array(
     'islandora_videojs' => array(
       'label' => t('video.js player'),
-      'description' => t('video.js for video.'),
+      'description' => t('video.js for audio and/or video.'),
       'callback' => 'islandora_videojs_callback',
       'mimetype' => array('audio/mpeg', 'video/mp4'),
       'configuration' => 'admin/islandora/islandora_viewers/videojs',
