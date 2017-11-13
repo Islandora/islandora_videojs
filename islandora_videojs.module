@@ -70,8 +70,8 @@ function template_preprocess_islandora_videojs(array &$variables) {
   elseif (isset($params['url']) && isset($params['mime'])) {
     $variables['sources'][] = array('url' => $params['url'], 'mime' => $params['mime']);
   }
-  $variables['center_play_button'] = (variable_get('islandora_videojs_center_play_button');
-  $variables['responsive'] = (variable_get('islandora_videojs_responsive');
+  $variables['center_play_button'] = (variable_get('islandora_videojs_center_play_button'));
+  $variables['responsive'] = (variable_get('islandora_videojs_responsive'));
   if (variable_get('islandora_videojs_responsive', TRUE)) {
     drupal_add_css(drupal_get_path('module', 'islandora_videojs') . '/css/videojs_responsive.css', array('group' => CSS_DEFAULT, 'every_page' => FALSE));
   }
