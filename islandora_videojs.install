@@ -1,0 +1,17 @@
+<?php
+/**
+ * @file
+ * Uninstall hook for this module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function islandora_videojs_uninstall() {
+  $variables = array(
+    'islandora_videojs_hls_library',
+    'islandora_videojs_center_play_button',
+    'islandora_videojs_responsive',
+  );
+  array_walk($variables, 'variable_del');
+}
