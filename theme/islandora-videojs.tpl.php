@@ -1,5 +1,5 @@
-<video id="islandora_videojs" <?php if (empty($responsive)): ?>width="640" height="360"<?php endif; ?>
-  <?php if (empty($center_play_button)): ?>class="video-js vjs-default-skin"
+<video id="islandora_videojs" <?php if (!$responsive): ?>width="640" height="360"<?php endif; ?>
+  <?php if (!$center_play_button): ?>class="video-js vjs-default-skin"
   <?php else: ?>class="video-js vjs-default-skin vjs-big-play-centered" <?php endif; ?>
     controls
   preload="auto"
