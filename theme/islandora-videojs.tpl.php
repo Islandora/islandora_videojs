@@ -6,7 +6,7 @@
   <?php if (isset($tn)): ?>
     poster="<?php print $tn; ?>"
   <?php endif; ?>
-  <?php if ($responsive != 0): ?>
+  <?php if ($responsive): ?>
     data-setup='{"fluid": true}'
   <?php else: ?>
     data-setup="{}"
