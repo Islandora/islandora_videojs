@@ -21,9 +21,16 @@ Install as usual, see [this](https://drupal.org/documentation/install/modules-th
 Select the Video.js viewer as the default viewer for a solution pack that uses audio or video datastreams. The
  Audio Solution Pack and the Video Solution Pack are known to work with Video.js.
 
+Two additional options available are:
+
+* "Center play button" to put the play button in the center of the player, rather than the top left corner.
+
+* "Responsive player" to make the videojs player responsive but requires you use a responsive theme.
+
  For example, at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
 
 [![Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
+
 
 
 ## Notes
