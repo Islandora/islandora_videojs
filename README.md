@@ -12,31 +12,33 @@ An Islandora viewer module using [Video.js](http://www.videojs.com/). It can pla
 
 ## Installation
 
-Install as usual, see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
+[Download](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip) and install the [video.js](http://www.videojs.com/) library to your sites/all/libraries folder, or run `drush videojs-plugin`. 
 
-[Download](https://github.com/videojs/video.js/releases/download/v5.10.2/video-js-5.10.2.zip) and install [video.js](http://www.videojs.com/) to your sites/all/libraries folder, or run `drush videojs-plugin`. 
+Install this module as usual, see [this](https://drupal.org/documentation/install/modules-themes/modules-7) for further information.
 
 ## Configuration
 
-Select the Video.js viewer as the default viewer for a solution pack that uses audio or video datastreams. The
- Audio Solution Pack and the Video Solution Pack are known to work with Video.js.
+Enable the Video.js viewer as the default viewer for a solution pack that uses audio or video datastreams. The
+ Audio Solution Pack and the Video Solution Pack can work with Video.js.
 
-Two additional options available are:
+For example, at **Administration » Islandora » Solution pack configuration » Video Solution Pack** (_admin/islandora/solution_pack_config/video_).
 
+![Solution Pack Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
+
+
+Configure Video.js at **Administration » Islandora » Islandora Viewers » Video.js** (_admin/islandora/islandora_viewers/videojs_). 
+Three options are available:
+
+* "Videojs-contrib-hls library" to enable HTTP Live Streaming (a streaming format native to mobile phones).
 * "Center play button" to put the play button in the center of the player, rather than the top left corner.
+* "Responsive player" to make the Video.js player responsive but requires you use a responsive theme.
 
-* "Responsive player" to make the videojs player responsive but requires you use a responsive theme.
-
- For example, at Administration » Islandora » Solution pack configuration » Video Solution Pack (admin/islandora/solution_pack_config/video).
-
-[![Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
-
-
+![Configuration](https://user-images.githubusercontent.com/1943338/32968854-2575fc40-cbb9-11e7-9e85-66fec561a24c.png)
 
 ## Notes
 
 * This viewer has been tested with video.js 5.10.2.
-* If you use the Drush command, it is advisable to Move (not copy) the install script to your `.drush` folder and run it.
+* If you use the Drush command, it is advisable to _move_ (not copy) the install script to your `.drush` folder and run it.
 
 ## Documentation
 
