@@ -1,0 +1,6 @@
+/* video-js responsiveness, will be applied to parent div coming from the video solution pack */
+.islandora-video-content {
+width: 100%;
+max-width: 640px;
+margin: 0 auto;
+}

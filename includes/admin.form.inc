@@ -17,6 +17,18 @@ function islandora_videojs_admin($form, &$form_state) {
     '#default_value' => variable_get('islandora_videojs_hls_library', FALSE),
     '#element_validate' => array('islandora_videojs_admin_islandora_videojs_hls_library_validate'),
   );
+  $form['islandora_videojs_center_play_button'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Center play button'),
+    '#description' => t('Put the play button in the center of the player, rather than the top left corner'),
+    '#default_value' => variable_get('islandora_videojs_center_play_button', FALSE),
+  );
+  $form['islandora_videojs_responsive'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Responsive player'),
+    '#description' => t('Make the videojs player responsive (requires a responsive theme)'),
+    '#default_value' => variable_get('islandora_videojs_responsive', FALSE),
+  );
 
   return system_settings_form($form);
 }
