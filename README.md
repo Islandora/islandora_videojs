@@ -23,8 +23,7 @@ Enable the Video.js viewer as the default viewer for a solution pack that uses a
 
 For example, at **Administration » Islandora » Solution pack configuration » Video Solution Pack** (_admin/islandora/solution_pack_config/video_).
 
-![Solution Pack Configuration](https://camo.githubusercontent.com/1c8251f9d0a2062abdb1433e18da6a9838a36264/687474703a2f2f692e696d6775722e636f6d2f4e684d4a5932752e706e67)
-
+![Solution Pack Configuration](https://user-images.githubusercontent.com/2738244/40234143-b0c31ea6-5a73-11e8-9e3b-8133917d496c.png)
 
 Configure Video.js at **Administration » Islandora » Islandora Viewers » Video.js** (_admin/islandora/islandora_viewers/videojs_). 
 Three options are available:
