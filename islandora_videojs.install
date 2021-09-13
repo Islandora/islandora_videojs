@@ -12,6 +12,7 @@ function islandora_videojs_uninstall() {
     'islandora_videojs_hls_library',
     'islandora_videojs_center_play_button',
     'islandora_videojs_responsive',
+    'islandora_videojs_transcript_dsid',
   );
   array_walk($variables, 'variable_del');
 }

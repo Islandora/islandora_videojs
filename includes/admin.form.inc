@@ -29,7 +29,12 @@ function islandora_videojs_admin($form, &$form_state) {
     '#description' => t('Make the videojs player responsive (requires a responsive theme)'),
     '#default_value' => variable_get('islandora_videojs_responsive', FALSE),
   );
-
+  $form['islandora_videojs_transcript_dsid'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Transcript/Subtitle DSID'),
+    '#description' => t('Datastream ID used for transcript/subtitle datastreams.'),
+    '#default_value' => 'TRANSCRIPT',
+  );
   return system_settings_form($form);
 }
 
