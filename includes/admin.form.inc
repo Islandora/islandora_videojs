@@ -33,7 +33,7 @@ function islandora_videojs_admin($form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Transcript/Subtitle DSID'),
     '#description' => t('Datastream ID used for transcript/subtitle datastreams.'),
-    '#default_value' => 'TRANSCRIPT',
+    '#default_value' => variable_get('islandora_videojs_transcript_dsid', 'TRANSCRIPT'),
   );
   return system_settings_form($form);
 }
