@@ -78,7 +78,7 @@ function template_preprocess_islandora_videojs(array &$variables) {
   $object = islandora_object_load($variables['params']['pid']);
   $variables['transcript'] = FALSE;
   $transcript_dsid = variable_get('islandora_videojs_transcript_dsid', 'TRANSCRIPT');
-  if ($object[$transcript_dsid]) {
+  if ($object[$transcript_dsid] && islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $object[$transcript_dsid])) {
     $variables['transcript'] = TRUE;
     $variables['transcript_path'] = url("islandora/object/{$object->id}/datastream/{$transcript_dsid}/view");
     preg_match('/Language: (.*)/', $object[$transcript_dsid]->content, $matches);
