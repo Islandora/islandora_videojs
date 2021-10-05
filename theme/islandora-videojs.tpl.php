@@ -15,6 +15,9 @@
   <?php foreach ($sources as $source): ?>
     <source src="<?php print $source['url']; ?>" type='<?php print $source['mime']; ?>'>
   <?php endforeach; ?>
+  <?php if ($transcript): ?>
+    <track kind="captions" src="<?php print $transcript_path; ?>" label="<?php print $transcript_language; ?>" default>
+  <?php endif; ?>
 </video>
 <?php if (empty($sources)): ?>
   <div id="video-js-warning">

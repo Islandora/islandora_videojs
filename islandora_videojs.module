@@ -75,6 +75,15 @@ function template_preprocess_islandora_videojs(array &$variables) {
   if (variable_get('islandora_videojs_responsive', TRUE)) {
     drupal_add_css(drupal_get_path('module', 'islandora_videojs') . '/css/videojs_responsive.css', array('group' => CSS_DEFAULT, 'every_page' => FALSE));
   }
+  $object = islandora_object_load($variables['params']['pid']);
+  $variables['transcript'] = FALSE;
+  $transcript_dsid = variable_get('islandora_videojs_transcript_dsid', 'TRANSCRIPT');
+  if ($object[$transcript_dsid] && islandora_datastream_access(ISLANDORA_VIEW_OBJECTS, $object[$transcript_dsid])) {
+    $variables['transcript'] = TRUE;
+    $variables['transcript_path'] = url("islandora/object/{$object->id}/datastream/{$transcript_dsid}/view");
+    preg_match('/Language: (.*)/', $object[$transcript_dsid]->content, $matches);
+    $variables['transcript_language'] = (!empty($matches) ? check_plain($matches[1]) : "English");
+  }
 }
 
 /**

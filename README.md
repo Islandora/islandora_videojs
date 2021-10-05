@@ -26,11 +26,14 @@ For example, at **Administration » Islandora » Solution pack configuration » 
 ![Solution Pack Configuration](https://user-images.githubusercontent.com/2738244/40234143-b0c31ea6-5a73-11e8-9e3b-8133917d496c.png)
 
 Configure Video.js at **Administration » Islandora » Islandora Viewers » Video.js** (_admin/islandora/islandora_viewers/videojs_). 
-Three options are available:
+Four options are available:
 
 * "Videojs-contrib-hls library" to enable HTTP Live Streaming (a streaming format native to mobile phones).
 * "Center play button" to put the play button in the center of the player, rather than the top left corner.
 * "Responsive player" to make the Video.js player responsive but requires you use a responsive theme.
+* "Transcript/Subtitle DSID" sets the datastream ID containing a WebVTT transcript.
+
+To use transcripts, on the object in question, add a custom datastream using the configured DSID (default TRANSCRIPT) and upload a WebVTT file.
 
 ![Configuration](https://user-images.githubusercontent.com/1943338/32968854-2575fc40-cbb9-11e7-9e85-66fec561a24c.png)
 
